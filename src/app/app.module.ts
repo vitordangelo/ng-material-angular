@@ -20,6 +20,7 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
 import { StopTrainingComponent } from './training/current-training/stop-training.component';
 import { AuthService } from './auth/auth.service';
 import { TrainingService } from './training/training.service';
+import { UiService } from './shared/ui.service';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
@@ -50,7 +51,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
     AngularFirestoreModule,
     AngularFireAuthModule
   ],
-  providers: [AuthService, TrainingService],
+  providers: [AuthService, TrainingService, UiService],
   bootstrap: [AppComponent],
   entryComponents: [StopTrainingComponent]
 })
