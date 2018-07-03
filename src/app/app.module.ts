@@ -18,6 +18,7 @@ import { TrainingService } from './training/training.service';
 import { UiService } from './shared/ui.service';
 import { AngularFireModule } from 'angularfire2';
 import { AuthModule } from './auth/auth.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { AuthModule } from './auth/auth.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    SharedModule,
     MaterialModule,
     AppRoutingModule,
     FlexLayoutModule,
@@ -36,7 +38,7 @@ import { AuthModule } from './auth/auth.module';
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     TrainingModule,
-    AuthModule
+    AuthModule,
   ],
   providers: [AuthService, TrainingService, UiService],
   bootstrap: [AppComponent]
